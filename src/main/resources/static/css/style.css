@@ -9,6 +9,10 @@ header {
 	height:100px;
 }
 
+.button-center {
+	align-items:center;
+	width:50%;
+}
 
 .main {
 	height:600px;
