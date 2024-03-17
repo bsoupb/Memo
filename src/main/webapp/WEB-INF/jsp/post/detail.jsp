@@ -14,15 +14,16 @@
 	<div id="wrap">
 		<c:import url="/WEB-INF/jsp/include/header.jsp" />
 		<section>
-			<div class="container main">
+			<div class="container">
 				<h2 class="text-center pt-5">메모 상세</h2>
 				<div class="d-flex mt-3">
 					<label class="col-1" style="font-size:18px !important; font-weight:bold">제목 : </label>  
 					<input type="text" class="form-control col-9" placeholder="제목을 입력해주세요" id="titleInput" value="${post.title }">
 				</div>
 					<textarea placeholder="내용을 입력해주세요" class="col-10 form-control mt-3" id="contentsInput">${post.contents }</textarea>
+					<img src="${post.imagePath }">
 				<div class="d-flex justify-content-between align-items-center mt-3 col-10">
-					<div>
+					<div class="py-3">
 						<a href="/post/list-view" class="btn btn-secondary">목록으로</a>
 						<button type="button" class="btn btn-danger">삭제하기</button>
 					</div>	
