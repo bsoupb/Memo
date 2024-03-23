@@ -15,7 +15,7 @@
 	<div id="wrap">
 	
 		<c:import url="/WEB-INF/jsp/include/header.jsp" />
-		<section class="main">
+		<section>
 			<div class="pt-5">
 				<h1 class="pl-3 text-center">메모 리스트</h1>
 				<div class="d-flex justify-content-center pt-3">

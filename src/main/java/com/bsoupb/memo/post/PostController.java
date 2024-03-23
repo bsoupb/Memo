@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bsoupb.memo.post.domain.Post;
@@ -13,13 +14,14 @@ import com.bsoupb.memo.post.service.PostService;
 
 import jakarta.servlet.http.HttpSession;
 
+@RequestMapping("/post")
 @Controller
 public class PostController {
 
 	@Autowired
 	private PostService postService;
 	
-	@GetMapping("/post/list-view")
+	@GetMapping("/list-view")
 	public String postList(
 			HttpSession session
 			, Model model) {
@@ -33,12 +35,12 @@ public class PostController {
 		return "/post/list";
 	}
 	
-	@GetMapping("/post/create-view")
+	@GetMapping("/create-view")
 	public String postInput() {
 		return "/post/input";
 	}
 	
-	@GetMapping("/post/detail-view")
+	@GetMapping("/detail-view")
 	public String postDetail(@RequestParam("id") int id, Model model) {
 		
 		// 하나의 메모 정보 조회
